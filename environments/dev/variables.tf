@@ -14,22 +14,21 @@ variable "vpc_cidr" {
 }
 
 variable "availability_zones" {
-  description = "Availability zones used by the GEOS infrastructure"
+  description = "Availability zones for the development environment"
   type        = list(string)
 }
 
 variable "public_subnet_cidrs" {
-  description = "CIDR blocks for public subnets"
+  description = "CIDR blocks for development public subnets"
   type        = list(string)
 }
 
 variable "private_app_subnet_cidrs" {
-  description = "CIDR blocks for private application subnets"
+  description = "CIDR blocks for development application subnets"
   type        = list(string)
 }
 
 variable "private_db_subnet_cidrs" {
-  description = "CIDR blocks for private database subnets"
+  description = "CIDR blocks for development database subnets"
   type        = list(string)
 }
-
