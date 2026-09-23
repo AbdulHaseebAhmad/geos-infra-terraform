@@ -438,3 +438,4 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+modules/geos-infra/templates/user-data.sh.tpl

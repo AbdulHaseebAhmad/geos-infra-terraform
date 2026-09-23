@@ -33,3 +33,31 @@ variable "private_db_subnet_cidrs" {
   type        = list(string)
 }
 
+variable "geos_app_servers" {
+  type = object({
+    ami           = string
+    instance_type = string
+    key_name      = string
+  })
+
+}
+
+variable "geos_bastion_server" {
+  type = object({
+    ami           = string
+    instance_type = string
+    key_name      = string
+  })
+
+}
+
+variable "geos_domain_name" {
+  type        = string
+  description = "The Domain Name"
+}
+
+variable "geos_hosted_zone_name" {
+  type        = string
+  description = "The Hosted Zone name for the domain"
+}
+
