@@ -1,5 +1,5 @@
 resource "aws_db_subnet_group" "geos_rds_db_subnet_group" {
-  name       = "geos-rds-db-subnet-group"
+name = "${var.environment_name}-geos-rds-db-subnet-group"
   subnet_ids = [aws_subnet.geos_private_db[0].id, aws_subnet.geos_private_db[1].id]
 
   tags = {

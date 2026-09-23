@@ -1,5 +1,5 @@
 resource "aws_iam_policy" "geos_ec2_iam_policy" {
-  name        = "geos_ec2_policy"
+name = "${var.environment_name}-geos_ec2_policy"
   path        = "/"
   description = "Allows the EC2 instance to retrieve the RDS credentials from Secrets Manager"
 

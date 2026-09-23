@@ -83,6 +83,6 @@ systemctl daemon-reload
 systemctl enable geos-backend
 
 systemctl enable nginx
-systemctl start nginx
 nginx -t
+systemctl start nginx
 systemctl reload nginx

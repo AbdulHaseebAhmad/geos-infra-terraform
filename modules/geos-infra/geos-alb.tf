@@ -1,5 +1,5 @@
 resource "aws_lb" "geos_alb" {
-  name               = "geos-alb"
+name = "${var.environment_name}-geos-alb"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.geos_alb_sg.id]
