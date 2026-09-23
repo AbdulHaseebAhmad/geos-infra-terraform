@@ -145,18 +145,24 @@ The Terraform implementation moves the project toward a **declarative model**, w
 
 ## Status
 
-🚧 **In Development**
+[svg](https://github.com/AbdulHaseebAhmad/geos-infra-terraform#status)
 
-The Terraform implementation is being developed incrementally, with the infrastructure being rebuilt and tested component by component.
+Completed
 
-## Future Plans
+The GEOS infrastructure has been successfully rebuilt from Bash-based AWS provisioning scripts to Terraform.
 
-* Complete the Terraform infrastructure
-* Improve module reusability
-* Refine environment configuration
-* Implement remote state management
-* Add Terraform validation and formatting to CI
-* Add Terraform plan checks to GitHub Actions
-* Integrate infrastructure deployment into the existing CI/CD workflow
-* Continue expanding the infrastructure toward a fully automated DevOps workflow
+The project now includes:
 
+- Reusable Terraform module with separate dev and production environments
+- 3-tier VPC architecture across 2 Availability Zones
+- Public, private application and private database subnets
+- Application Load Balancer with HTTP to HTTPS redirection
+- EC2 application servers and bastion host
+- RDS PostgreSQL in private subnets
+- IAM roles and policies for application access to AWS services
+- Secrets Manager integration for runtime database credentials
+- ACM certificates with DNS validation through Route 53
+- S3 remote state with DynamoDB state locking
+- Existing CI/CD pipeline integrated with the Terraform-managed infrastructure
+
+The infrastructure has been deployed and tested on AWS as part of the GEOS production platform.
